@@ -1,1 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
+* {
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: #F8F9FB;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white !important;
+  width: 100%;
+  padding: 15px 50px;
+}
+
+.logo {
+  display: flex;
+  gap: 20px;
+}
+
+.logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-header h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.logo-header p {
+  color: #8C8CA1;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* Time Counter Styling */
+.timer-wrapper {
+  display: flex;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.timer-container {
+  background-color: #ECE8FF;
+  border-radius: 8px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.timer img {
+  width: 50px;
+  height: 50px;
+}
+
+.timer-count {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.timer-count p {
+  color: #755AE2;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+}
+
+.timer-count p span {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.hide  {
+  margin-top: 10px;
+}
