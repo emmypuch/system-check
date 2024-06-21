@@ -415,6 +415,7 @@ button {
   font-weight: 500;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 @media  (max-width: 768px) {
@@ -503,6 +504,7 @@ button {
   font-weight: 400;
   line-height: 16.37px;
   color: #F5F3FF;
+  cursor: pointer;
 }
 
 .process-container {

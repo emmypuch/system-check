@@ -10,7 +10,7 @@ import Circle from "../images/circle.svg";
 
 export const SystemOption = () => {
   return (
-    <div>
+    <>
       <div className="system-option-container">
         <div className="box">
           <div className="box-content">
@@ -55,6 +55,6 @@ export const SystemOption = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
