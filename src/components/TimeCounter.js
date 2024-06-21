@@ -1,4 +1,6 @@
 import React from "react";
+import Clock from "../images/time.svg";
+import Hide from "../images/hide.svg";
 
 export const TimeCounter = () => {
   return (
@@ -6,7 +8,7 @@ export const TimeCounter = () => {
       <div className="timer-container">
         <div className="timer">
           <div>
-            <img src="" alt="Clock" />
+            <img src={Clock} alt="Clock" />
           </div>
           <div className="timer-count">
             <p>
@@ -16,7 +18,7 @@ export const TimeCounter = () => {
         </div>
       </div>
       <div className="hide">
-        <img src="" alt="eye" />
+        <img src={Hide} alt="eye" />
       </div>
     </div>
   );
