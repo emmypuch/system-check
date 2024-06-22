@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { TimeCounter } from "./TimeCounter";
 
 export const Modal = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isCounting, setIsCounting] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => setIsOpen(true), 5000);
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   const closeModal = () => {
     setIsOpen(false);
+    if (!isCounting) {
+      setIsCounting(true);
+    }
+  };
+
+  const handleProceed = () => {
+    closeModal();
+    if (!isCounting) {
+      setIsCounting(true);
+    }
   };
 
   return (
@@ -28,7 +45,13 @@ export const Modal = () => {
               </p>
             </div>
             <div className="proceed-btn">
-              <a href="#">Proceed</a>
+              {isCounting ? (
+                <TimeCounter />
+              ) : (
+                <a href="#" onClick={handleProceed}>
+                  Proceed
+                </a>
+              )}
             </div>
           </div>
         </div>

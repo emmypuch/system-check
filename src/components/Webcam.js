@@ -5,7 +5,7 @@ export const Webcam = () => {
   const [devices, setDevices] = React.useState([]);
 
   const handleDevices = React.useCallback((mediaDevices) => {
-    setDevices(mediaDevices.filter(({ kind }) => kind === "videinput")),
+    setDevices(mediaDevices.filter(({ kind }) => kind === "videoinput")),
       [setDevices];
   });
 
