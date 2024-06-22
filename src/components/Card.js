@@ -1,7 +1,7 @@
 import React from "react";
 import { PictureCapture } from "./PictureCapture";
 import { SystemOption } from "./SystemOption";
-import { Button } from "./Button";
+// import { Button } from "./Button";
 // import ObjectDetection from "./ObjectDetection";
 
 export const Card = () => {
@@ -29,9 +29,9 @@ export const Card = () => {
             <SystemOption />
           </div>
         </div>
-        <div className="btn">
+        {/* <div className="btn">
           <Button />
-        </div>
+        </div> */}
         {/* <ObjectDetection /> */}
       </div>
     </div>

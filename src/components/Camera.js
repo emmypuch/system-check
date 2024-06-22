@@ -39,7 +39,7 @@ export const Camera = ({ onCapture }) => {
           onUserMedia={onUserMedia}
           mirrored={true}
         />
-        {/* <button onClick={capturePhoto}>Take picture and continue</button> */}
+        <button onClick={capturePhoto}>Take picture and continue</button>
         {/* <button onClick={() => setUrl(null)}>Refresh</button> */}
 
         {url && (

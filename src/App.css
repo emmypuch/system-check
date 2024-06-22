@@ -118,7 +118,7 @@ body {
   }
 
   .logo-header h2 {
-    font-size: 14px;
+    font-size: 12px;
   }
   
   .logo-header p {
@@ -215,9 +215,12 @@ body {
     height: 30px;
   }
 
+  .timer-count p span {
+    font-size: 10px;
+  }
+
   .timer-count p {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 10px;
   }
 } 
 
@@ -360,6 +363,10 @@ button {
 
   .card-wrapper {
     height: auto;
+  }
+
+  .picture {
+    margin-top: 55px;
   }
 
   .btn {

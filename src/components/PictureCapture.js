@@ -22,9 +22,6 @@ export const PictureCapture = () => {
           <ObjectDetection imageUrl={imageUrl} />
         </div>
       )}
-      {/* <div className="picture-capture-container">
-        <img src={Capture} alt="" />
-      </div> */}
     </>
   );
 };

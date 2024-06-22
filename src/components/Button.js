@@ -1,9 +1,10 @@
-import React from "react";
+// import React from "react";
+// import { capturePhoto } from "./Camera";
 
-export const Button = () => {
-  return (
-    <div>
-      <button>Take picture and continue</button>
-    </div>
-  );
-};
+// export const Button = ({ onCapturePhoto }) => {
+//   return (
+//     <div>
+//       <button onClick={onCapturePhoto}>Take picture and continue</button>
+//     </div>
+//   );
+// };
