@@ -3,11 +3,11 @@ import * as cocoSsd from "@tensorflow-models/coco-ssd";
 
 const ObjectDetection = ({ imageUrl }) => {
   const [predictions, setPredictions] = useState([]);
-  const [loading, setLoading] = useState(false); // Updated loading state to false initially
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const runObjectDetection = async () => {
-      setLoading(true); // Set loading to true before processing
+      setLoading(true);
       const net = await cocoSsd.load();
       console.log("Model loaded:", net);
 
@@ -25,7 +25,7 @@ const ObjectDetection = ({ imageUrl }) => {
           console.error("Error loading image:", error);
         };
       }
-      setLoading(false); // Set loading to false after processing
+      setLoading(false);
     };
 
     runObjectDetection();

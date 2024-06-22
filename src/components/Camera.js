@@ -19,9 +19,7 @@ export const Camera = ({ onCapture }) => {
     setUrl(imageSrc);
   }, [webcamRef]);
 
-  const onUserMedia = (e) => {
-    console.log(e);
-  };
+  const onUserMedia = (e) => {};
 
   return (
     <>

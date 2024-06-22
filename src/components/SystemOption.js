@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Webcam from "../images/webcam.svg";
 import Speed from "../images/speed.svg";
 import Light from "../images/light.svg";
 import Circle from "../images/circle.svg";
-// import Video from "../images/video.svg"
-// import Internet from "../images/full-network.svg"
-// import Microphone from "../images/microphone.svg"
-// import LightFull from "../images/light-full.svg"
+import Video from "../images/video.svg";
+import Internet from "../images/full-network.svg";
+import Microphone from "../images/microphone.svg";
+import LightFull from "../images/light-full.svg";
 
 export const SystemOption = () => {
+  const [internetSpeed, setInternetSpeed] = useState(null);
+
+  useEffect(() => {
+    if (navigator.connection && navigator.connection.downlink) {
+      const speedMbps = navigator.connection.downlink;
+      setInternetSpeed(speedMbps);
+    }
+  }, []);
+
   return (
     <>
       <div className="system-option-container">
@@ -18,7 +27,7 @@ export const SystemOption = () => {
             <p>Webcam</p>
             <div className="circle">
               <img src={Circle} alt="circle" />
-              {/* <img src={Video} alt="video" /> */}
+              <img src={Video} alt="video" />
             </div>
           </div>
         </div>
@@ -28,8 +37,11 @@ export const SystemOption = () => {
             <p>Speed</p>
             <div className="circle">
               <img src={Circle} alt="circle" />
-              {/* <img src={Internet} alt="network" /> */}
+              <img src={Internet} alt="network" />
             </div>
+            <p>
+              {internetSpeed ? `${internetSpeed} Mbps` : "Detecting speed..."}
+            </p>
           </div>
         </div>
       </div>
@@ -40,7 +52,7 @@ export const SystemOption = () => {
             <p>Gadget mic</p>
             <div className="circle">
               <img src={Circle} alt="circle" />
-              {/* <img src={Microphone} alt="microphone" /> */}
+              <img src={Microphone} alt="microphone" />
             </div>
           </div>
         </div>
@@ -50,7 +62,7 @@ export const SystemOption = () => {
             <p>Lighting</p>
             <div className="circle">
               <img src={Circle} alt="circle" />
-              {/* <img src={LightFull} alt="bulb" /> */}
+              <img src={LightFull} alt="bulb" />
             </div>
           </div>
         </div>
