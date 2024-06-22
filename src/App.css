@@ -40,6 +40,10 @@ body {
   align-items: center;
 }
 
+.logo-header {
+  margin-left: 7px;
+}
+
 .logo-header h2 {
   font-weight: 500;
   font-size: 20px;
@@ -146,10 +150,8 @@ body {
 }
 
 .close-eye {
-  width: 3px;
-  height: 30px;
-  background-color: #755ae2;
-  border-radius: 5px;
+  width: 30px;
+  height: 40px;
 }
 
 .timer img {

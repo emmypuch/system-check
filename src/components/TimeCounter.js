@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Clock from "../images/time.svg";
 import Hide from "../images/hide.svg";
-import Close from "../images/close-eye.png";
+import Close from "../images/hide-eye.svg";
 
 export const TimeCounter = () => {
   const [showTimeLeft, setShowTimeLeft] = useState(true);
   const [timeLeft, setTimeLeft] = useState(29 * 60 + 10); // Initial time in seconds (29 minutes and 10 seconds)
+  const [showEyeIcon, setShowEyeIcon] = useState(false); // State to manage which eye icon to display
 
   const toggleTimeLeft = () => {
     setShowTimeLeft(!showTimeLeft);
+    setShowEyeIcon(!showEyeIcon); // Toggle which eye icon to show
   };
 
   useEffect(() => {
@@ -60,9 +62,11 @@ export const TimeCounter = () => {
         </div>
       </div>
       <div className="hide" onClick={toggleTimeLeft}>
-        <div className="close-eye"></div>
-        <img src={Hide} alt="eye" />
-        {/* <img src={Close} alt="" className="close-eye" /> */}
+        {showTimeLeft ? (
+          <img src={Hide} alt="Hide" />
+        ) : (
+          <img src={Close} alt="Close Eye" className="close-eye" />
+        )}
       </div>
     </div>
   );
