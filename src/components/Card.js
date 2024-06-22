@@ -2,6 +2,7 @@ import React from "react";
 import { PictureCapture } from "./PictureCapture";
 import { SystemOption } from "./SystemOption";
 import { Button } from "./Button";
+// import ObjectDetection from "./ObjectDetection";
 
 export const Card = () => {
   return (
@@ -31,6 +32,7 @@ export const Card = () => {
         <div className="btn">
           <Button />
         </div>
+        {/* <ObjectDetection /> */}
       </div>
     </div>
   );
